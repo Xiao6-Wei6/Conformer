@@ -442,4 +442,4 @@ class Conformer(nn.Module):
         x_t = self.trans_norm(x_t)
         tran_cls = self.trans_cls_head(x_t[:, 0])
 
-        return [conv_cls, tran_cls]
+        return [conv_cls, tran_cls] # 此处以列表的形式返回两个分支的分类结果，那么是如何汇总分类结果的呢？
